@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 999;
+    display: none; /* Initially hidden */
+  }
+  
+  #question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1000; /* Ensures question is on top of overlay */
+  }
+  
+  #button-container {
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: transform 0.2s ease-out, margin-right 0.2s ease-out;
+  }
+  
+  .yes-button {
+    background-color: green;
+    color: white;
+  }
+  
+  .no-button {
+    background-color: red;
+    color: white;
+  }
+  
+  #message {
+    display: none;
+    font-size: 24px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1000; /* Ensures message is on top of overlay */
+  }
+  
+  #cow-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust as necessary */
+    overflow: hidden;
+  }
+  
+  #cow-image {
+    position: absolute;
+    left: -200px; /* Start off screen */
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: left 2s ease-in-out;
+    z-index: 1000;
+  }
+  
+  #birthday-message {
+    display: none;
+    font-size: 24px;
+    margin-top: 20px;
+    animation: pulse 1s infinite alternate;
+    position: relative;
+    z-index: 1000; /* Ensures birthday message is on top of overlay */
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+  
